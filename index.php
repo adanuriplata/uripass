@@ -1,9 +1,12 @@
+
 <?php
-require ('models/Model.php');
 
-$obj = new Model();
+require_once('./controllers/Autoload.php');
+$autoload = new autoload();
 
 
-$obj->get_query();
+$llamada = new viewController();
+
+$llamada->load_view();
 
 

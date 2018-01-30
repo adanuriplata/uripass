@@ -126,3 +126,12 @@ FROM users
   INNER JOIN categories
     ON accounts.id_categorie = categories.id_categorie
 WHERE categories.categorie_name = 'social media' && accounts.id_user = 2;
+
+
+/*
+* Ejemplo Insert con REPLACE a la tabla users
+*/
+
+REPLACE INTO users (user_name, user_last_name, user_avatar, user, email, pass, role)
+VALUES ('$user_name', '$user_last_name', '$user_avatar', 'user', '$email', MD5('$pass'), '$role');
+
